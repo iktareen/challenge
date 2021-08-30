@@ -1,0 +1,93 @@
+@import './helpers/variables.scss';
+
+body {
+  margin: 0 auto;
+  font-family: $helvetica;
+  font-size: 16px;
+  font-weight: 500;
+  color: $text;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+  background-image: url('../images/Body-BG.png');
+  background-color: #cccccc;
+}
+
+.chat-container {
+  max-width: 640px;
+  margin: 0 auto;
+
+  .chat-message {
+    background: $white;
+    border: 1px solid $greyBorder;
+    border-radius: 5px;
+    width: auto;
+  }
+
+  .my-message {
+    background: $chatBackground;
+    float: right;
+    width: 420px;
+    word-wrap: break-word;
+  }
+}
+
+.sub-text {
+  color: $subText;
+}
+
+.message-form {
+  background: $formBackground;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 12px;
+
+  .submit-button {
+    background: $submitButton;
+    margin-left: 10px;
+    font-weight: 500;
+    border: 1px solid $submitButton;
+  }
+
+  .form-control {
+    border: 1px solid $inputField;
+  }
+}
+
+.hi-50 {
+  height: 50px;
+}
+
+/* Media Queries */
+/* md */
+@media (max-width: 640px){
+  .message-form {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .chat-container {
+    .chat-message {
+      margin: 0 24px;
+    }
+  }
+}
+
+/* xs */
+@media (max-width: 575px){
+  body {
+    font-size: 3vw;
+  }
+
+  .message-form {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .chat-container {
+    .my-message {
+      width: 240px;
+    }
+  }
+}
